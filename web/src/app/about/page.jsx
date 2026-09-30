@@ -58,7 +58,7 @@ const AboutPage = () => {
               </h2>
 
               <p className="text-slate-600 text-sm leading-relaxed font-sans">
-                <strong>Cares Bangladesh</strong> was founded with a deep commitment to supporting neurodiverse children and individuals experiencing developmental, speech, or behavioral delays. Located in Uttara, Dhaka, our state-of-the-art center brings together speech-language pathologists, occupational therapists, behavioral analysts, and special educators.
+                <strong>Cares Bangladesh</strong> was founded with a deep commitment to supporting neurodiverse children and individuals experiencing developmental, speech, or behavioral delays. Located in Sabujbag, Basabo, Dhaka, our state-of-the-art center brings together speech-language pathologists, occupational therapists, behavioral analysts, and special educators.
               </p>
 
               <p className="text-slate-600 text-sm leading-relaxed font-sans">

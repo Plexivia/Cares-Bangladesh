@@ -27,7 +27,7 @@ const LocationPage = () => {
     <>
       <PageHeader
         title="Our Location & Contact"
-        subtitle="Visit our specialized therapy center in Uttara, Dhaka"
+        subtitle="Visit our specialized therapy center in Sabujbag, Basabo, Dhaka"
         breadcrumb={[{ name: 'Location' }]}
       />
 
@@ -46,7 +46,7 @@ const LocationPage = () => {
               </h2>
 
               <p className="text-slate-600 text-sm leading-relaxed font-sans">
-                Our clinic is conveniently located in Uttara Sector 11 with child-friendly facilities, sensory therapy rooms, and easy parking.
+                Our clinic is conveniently located in Middle Basabo, Sabujbag, Dhaka with child-friendly facilities, sensory therapy rooms, and easy parking.
               </p>
 
               <div className="space-y-4 pt-2">
@@ -178,7 +178,7 @@ const LocationPage = () => {
           <div className="mt-16 rounded-3xl overflow-hidden border-2 border-slate-100 shadow-md h-96 w-full">
             <iframe
               title="Cares Bangladesh Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.435748259779!2d90.3842188!3d23.8741753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c41498b3c683%3A0xe10842e2a0f8bf95!2sSector%2011%2C%20Uttara%2C%20Dhaka%201230!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+              src="https://maps.google.com/maps?q=117,+Middle+Basabo,+Sabujbag,+Dhaka+1214&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
