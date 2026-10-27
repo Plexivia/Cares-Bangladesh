@@ -18,7 +18,7 @@ help:
 deploy:
 	@echo "🚀 Deploying Cares Bangladesh..."
 	git fetch --all
-	git reset --hard origin/master
+	git reset --hard origin/Live
 	mkdir -p /opt/www/uploads
 	chmod -R 777 /opt/www/uploads
 	$(COMPOSE) build

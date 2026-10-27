@@ -3,12 +3,12 @@ set -e
 
 echo "🚀 Starting Cares Bangladesh Production Deployment..."
 
-PROJECT_DIR="/opt/live"
+PROJECT_DIR="/opt/cares"
 cd $PROJECT_DIR
 
 echo "📥 Pulling latest code from GitHub..."
 git fetch --all
-git reset --hard origin/master
+git reset --hard origin/Live
 
 echo "📁 Ensuring upload and asset directories..."
 mkdir -p /opt/www/uploads
