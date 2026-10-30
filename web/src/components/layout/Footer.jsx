@@ -37,7 +37,7 @@ const Footer = () => {
                   alt="Cares Bangladesh Logo"
                   onError={(e) => {
                     e.currentTarget.onerror = null;
-                    e.currentTarget.src = '/assets/img/logo.svg';
+                    e.currentTarget.src = '/assets/img/logo.png';
                   }}
                   className="h-12 md:h-14 w-auto object-contain"
                 />

@@ -54,6 +54,9 @@ const Navbar = ({ onOpenBookTour }) => {
               src={logoUrl}
               alt="Cares Bangladesh Logo"
               className="h-12 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+              onError={(e) => {
+                e.currentTarget.src = '/assets/img/logo.png';
+              }}
             />
           </div>
         </Link>
