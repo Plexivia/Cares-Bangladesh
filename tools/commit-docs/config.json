@@ -1,0 +1,37 @@
+{
+  "hubUrl": "https://api.plexihub.space",
+  "docsKey": "Ymseq9SKKORbfRKe",
+  "clientKey": "cares-bangladesh",
+  "ownerDId": "8340597063031393",
+  "project": "cares-bangladesh",
+  "timeoutMs": 10000,
+  "categories": {
+    "planning": [
+      "plans/",
+      "planning/"
+    ],
+    "docs": [
+      "Docs/",
+      "GEMINI.md",
+      "README.md"
+    ],
+    "dashboard": [
+      "admin/"
+    ],
+    "frontend": [
+      "web/"
+    ],
+    "infra": [
+      "nginx/",
+      "scripts/",
+      "cpanel/",
+      "docker-compose.yml",
+      "docker-compose.prod.yml",
+      "Makefile",
+      "prod-deploy.sh"
+    ],
+    "backend": [
+      "server/"
+    ]
+  }
+}

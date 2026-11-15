@@ -16,6 +16,7 @@ Every commit message must strictly follow this structure:
   - `chor` (Chores / dependency / build updates)
   - `styl` (Styling / CSS / theme UI changes)
   - `test` (Testing / test scripts)
+  - `plan` (Planning & architecture goals)
 - **description**: Clear, concise explanation of the change in sentence case.
 
 **Examples**:
@@ -31,15 +32,19 @@ Every commit message must strictly follow this structure:
 
 ---
 
-## 3. Centralized Logging via Central Hub (Zero Local Docs)
+## 3. Centralized Logging & Plexi Docs Integration (Zero Local Docs)
+- **Automatic Sync via Post-Commit Hook (`tools/commit-docs`)**: Every git commit is automatically documented and synced to Plexi Docs (`https://docs.plexihub.space`) using `node tools/commit-docs/run.mjs` via `.git/hooks/post-commit`.
+- **Commit Body Structure for Plexi Docs**:
+  Add trailers to the commit message:
+  - `Category:` (`frontend` / `backend` / `dashboard` / `infra` / `docs` / `planning`)
+  - `Why:` Context and problem statement
+  - `Purpose:` Desired outcome / business value
+  - Free Markdown body detailing file changes, architecture decisions, and testing notes.
+  - `docs` commit: Add `Section:` (e.g. `integration`) and optional `Page:`; the commit body becomes that documentation page in Plexi Docs.
+  - `plan` commit: Add `Status:` (`draft` / `active` / `done`), `Goal:`, and optional `Page:`; body becomes the Planning page.
+- **Offline Safety (Queue)**: The hook ends with `|| true`, so commits are NEVER blocked. If PlexiHub is unreachable, commits are buffered in `.git/plexi-docs-queue/` and flushed automatically on subsequent commits.
+- **Hook Setup**: Run `node tools/commit-docs/install.mjs` once per machine/environment.
 - **NO LOCAL DOCUMENTATION OR BATCH FILES IN `Docs/` FOR LOGS**: We no longer write or maintain markdown changelogs or batch files locally.
-- All actions, changes, requirements, and test audits must be logged directly into the Central Hub using the rich logger CLI:
-  ```bash
-  node client-kit/log.js "<ID>(<type>): <Summary>" \
-    --reqs "- Business requirement and problem context" \
-    --changes "- File and logic changes breakdown" \
-    --notes "Verification and test notes"
-  ```
 - Refer to `Docs/00_Architecture.md` for full project layout and component breakdown.
 
 ---
