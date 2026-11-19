@@ -7,6 +7,7 @@ import homeSliderRouter from "./routes/HomeSliderRoute.js";
 import blogRouter from "./routes/BlogRoute.js";
 import teamRouter from "./routes/TeamRoute.js";
 import inquiryRouter from "./routes/InquiryRoute.js";
+import supportRouter from "./routes/SupportRoute.js";
 import express from "express";
 
 const coreRouter = Router();
@@ -19,5 +20,6 @@ coreRouter.use("/home-slider", homeSliderRouter);
 coreRouter.use("/blogs", blogRouter);
 coreRouter.use("/team", teamRouter);
 coreRouter.use("/inquiries", inquiryRouter);
+coreRouter.use("/support", supportRouter);
 
 export default coreRouter;

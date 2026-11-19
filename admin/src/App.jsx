@@ -18,6 +18,7 @@ import ClientDetailPage from '@/pages/ClientDetailPage'
 import UsersPage from '@/pages/UsersPage'
 import EmployeesPage from '@/pages/EmployeesPage'
 import SettingsPage from '@/pages/SettingsPage'
+import SupportDeskPage from '@/pages/SupportDeskPage'
 import DocumentStudioPage from '@/pages/DocumentStudioPage'
 import NotFoundPage from '@/pages/NotFoundPage'
 import CashBook from '@/pages/accounting/CashBook'
@@ -87,6 +88,7 @@ export default function App() {
               <Route path="accounts/bank-ledger" element={<BankLedger />} />
               <Route path="accounts/expenses" element={<Expenses />} />
 
+              <Route path="support" element={<SupportDeskPage />} />
               <Route path="settings" element={<SettingsPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>

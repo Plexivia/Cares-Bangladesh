@@ -46,6 +46,8 @@ const envSchema = z.object({
   CENTRAL_HUB_URL: z.string().optional().default(""),
   CENTRAL_HUB_SECRET: z.string().optional().default(""),
   VPS_IP: z.string().optional().default(""),
+  PLEXIVIA_API_URL: z.string().optional().default("https://api.plexivia.com"),
+  PLEXIVIA_SUPPORT_KEY: z.string().optional().default(""),
   TURNSTILE_SECRET_KEY: z.string().optional().default(""),
 });
 

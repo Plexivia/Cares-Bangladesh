@@ -102,7 +102,7 @@ apiClient.interceptors.response.use(
       }
     }
 
-    if (typeof window !== 'undefined' && !isAuthRequest) {
+    if (typeof window !== 'undefined' && !isAuthRequest && !originalRequest?.skipGlobalError) {
       handleGlobalError(error);
     }
     return Promise.reject(error);
