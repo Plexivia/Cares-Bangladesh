@@ -1,4 +1,4 @@
-.PHONY: deploy build status logs logs-server logs-admin logs-web down help
+.PHONY: deploy deploy-notify build status logs logs-server logs-admin logs-web down help
 
 COMPOSE = docker compose -f docker-compose.prod.yml
 
@@ -14,6 +14,7 @@ help:
 	@echo "  make logs-admin   View dashboard container logs"
 	@echo "  make logs-web     View storefront container logs"
 	@echo "  make down         Stop all containers"
+	@echo "  make deploy-notify  Record the deploy version in Plexivia"
 
 deploy:
 	@echo "🚀 Deploying Cares Bangladesh..."
@@ -26,6 +27,10 @@ deploy:
 	docker image prune -f
 	@echo "✓ Deployment complete!"
 	$(COMPOSE) ps
+	@bash scripts/deploy-notify.sh
+
+deploy-notify:
+	@bash scripts/deploy-notify.sh
 
 build: deploy
 

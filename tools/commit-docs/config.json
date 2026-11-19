@@ -19,7 +19,7 @@
       "admin/"
     ],
     "frontend": [
-      "web/"
+      "frontend/"
     ],
     "infra": [
       "nginx/",
@@ -31,7 +31,7 @@
       "prod-deploy.sh"
     ],
     "backend": [
-      "server/"
+      "backend/"
     ]
   }
 }

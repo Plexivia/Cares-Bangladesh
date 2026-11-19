@@ -14,12 +14,12 @@ services:
 
   server:
     build:
-      context: ./server
+      context: ./backend
       dockerfile: Dockerfile
     container_name: cares-server
     restart: always
     env_file:
-      - ./server/.env
+      - ./backend/.env
     environment:
       - PORT=5092
       - NODE_ENV=production
@@ -49,7 +49,7 @@ services:
 
   web:
     build:
-      context: ./web
+      context: ./frontend
       dockerfile: Dockerfile
     container_name: cares-web
     restart: always

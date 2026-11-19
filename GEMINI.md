@@ -65,12 +65,15 @@ const calculateDiscount = (items) => {
 
 ---
 
-## 5. Deployment Rules (STRICT — NO EXCEPTIONS)
-- **NEVER run any VPS build, `docker compose up --build`, or deployment command without user instruction.**
-- When user instructs *"ডিপ্লয় দাও"*, execute the deployment commands directly using tools instead of outputting code text.
-- **`temp` branch commits and `git push` are fine without confirmation.**
-- **Merging `temp` into `Live` and pushing to GitHub is fine without confirmation.**
-- **Only the actual VPS build/deploy step requires explicit user command.**
+## 5. Git Branching & Deployment Rules (STRICT — NO EXCEPTIONS)
+- **Commit and push directly to `Live`**: all work (features, fixes, refactoring, docs) is committed on and pushed straight to the **`Live`** branch. No `temp`/`dev` step, no merge step.
+- **Never push to `master`** and never force-push `Live`.
+- **Commit and push only when the user asks.** Once asked, commit and `git push origin Live` without further confirmation.
+- **Deploy source is `Live` only**: production pulls and builds from `origin/Live`.
+- **NEVER run any VPS build, `docker compose up --build`, or deployment command without user instruction.** When the user says *"ডিপ্লয় দাও"*, run the deployment directly with tools instead of printing commands.
+- **`make deploy` runs everything in Docker**: backend, admin, frontend and mongodb are built and run only through `docker compose -f docker-compose.prod.yml`. Never run node/npm builds directly on the VPS host.
+- **Plexivia deploy notification**: `make deploy` (and `prod-deploy.sh`) ends with `scripts/deploy-notify.sh`, which records the version in Plexivia (`https://api.plexivia.com/api/deploy/bump?key=…`, target `CARES`), the same way Surokkha does. Run it alone with `make deploy-notify`. It never fails the deploy.
+- **Plexivia Support Desk**: the backend proxies `/api/v1/support` to Plexivia with `PLEXIVIA_SUPPORT_KEY` from `backend/.env` (server-side only, never in the admin bundle).
 
 ---
 

@@ -31,4 +31,6 @@ docker image prune -f
 echo "📊 Checking container health..."
 docker compose ps
 
+bash scripts/deploy-notify.sh
+
 echo "✅ Cares Bangladesh Deployment Completed Successfully!"
